@@ -1,33 +1,21 @@
-package stringprograms;
-
-import java.util.Scanner;
+package com.stringprograms;
 
 public class Palindrome {
-public static void main(String[] args) {
-	Scanner s=new Scanner(System.in);
-	System.out.println("enter the string=");
-	String st=s.next();
-	char[]c=st.toCharArray();
-	 
-	String palin="";
-	for(int i=c.length-1;i>=0;i--)
-	{
-		palin=palin+c[i];
-		 
+	public static void main(String[] args) {
+		String s1 = "radar";
+		char c[] = s1.toCharArray();
+		String s2 = "";
+		for (int i = c.length - 1; i >= 0; i--) {
+			// System.out.print(c[i]);
+			s2 = s2 + c[i];
+		}
+		System.out.println("s2=" + s2);
+		StringBuilder s3 = new StringBuilder(s1);
+		System.out.println("rev=" + s3.reverse());
+
+		if (s2.equals(s1))
+			System.out.println("palindrome");
+		else
+			System.out.println("not palindrome");
 	}
-	System.out.println(palin);
-	System.out.println(st);
-	if( st.equals(palin))
-	{
-		 System.out.println("palin");
-	}
-	else
-	{
-		System.out.println("not palin");
-	}
-//	if(b==true)
-//	System.out.println("palindrome");
-//	else
-//		System.out.println("not palindrome");
-}
 }
